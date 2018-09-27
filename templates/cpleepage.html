@@ -6,25 +6,40 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Week2網頁排版測試中</title>
     <link href="..\static\css\style.css" rel="stylesheet" type="text/css" />
+    <!--忘了怎加圖片連結了-->
 </head>
 
 <body>
+    <h1>
+        <img src="../source/picture/logo2.png" alt="logo" id="linkpic">
+        <ul>
+            <li><a href="cpleepage.html">Home</a></li>
+            <li><a href="news.asp">News</a></li>
+            <li><a href="contact.asp">Contact</a></li>
+            <li><a href="about.asp">About</a></li>
+        </ul>
+    </h1>>
     <h1>Hi大家，這是第二週的陽春範例。
-        <p id="ps" font-size:200%>改!</p>
+        <span id="ps" font-size:200%>改!</span>
     </h1>
     <h2>第二週需要學的是html跟css基礎<br> 網路上有很多教學，也有很多模板～
         <br> 大家加油！
-        <br>
+        <br><span id="ta">好喔感恩我盡量QQ</span>
     </h2>
-    <p id="ta">by助教<br></p>
     <div id="container">
         <div id="content">
             <div class="msg">
-                <span class="name">Pecu</span> Hello,Class!
+                <span class="name">Pecu
+                    <img src="../source/picture/頭像A.png">
+                <!--還不是很懂CSS的input,class的那是啥用R-->
+                <!--頭像要怎排版要再思考= =-->
+                </span> Hello,Class!
 
             </div>
             <div class="msg">
-                <span class="name">Michael</span> Hello,Pecu.
+                <span class="name">Michael</span>
+                <span>
+                <img src="../source/picture/頭像B.png"></span> Hello,Pecu.
             </div>
         </div>
         <div id="send-box">
@@ -37,5 +52,3 @@
         </div>
     </div>
 </body>
-
-</html>
