@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+{% load staticfiles %}
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +12,15 @@
 
 <body>
     <h1>
-        <img src="../source/picture/logo2.png" alt="logo" id="linkpic">
+        <a href="cpleepage.html">
+            <img src="C:\Users\USER\csx2018cplee\source\picture\logo2.png" alt="logo" id="linkpic">
+        </a>
+
         <ul>
             <li><a href="cpleepage.html">Home</a></li>
             <li><a href="news.asp">News</a></li>
             <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.asp">About</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </h1>>
     <h1>Hi大家，這是第二週的陽春範例。
@@ -28,14 +32,15 @@
     </h2>
     <div id="container">
         <div id="content">
+            {% for name in names %}
             <div class="msg">
                 <span class="name">Pecu
                     <img src="../source/picture/頭像A.png">
                 <!--還不是很懂CSS的input,class的那是啥用R-->
                 <!--頭像要怎排版要再思考= =-->
                 </span> Hello,Class!
-
             </div>
+            {% endfor %}
             <div class="msg">
                 <span class="name">Michael</span>
                 <span>

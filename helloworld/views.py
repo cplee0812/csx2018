@@ -6,6 +6,11 @@ from django.contrib.auth.models import User
 
 
 def index(request):
-	return render(request, 'cpleepage.html')
+	template = loader,get_template('cpleepage.html')
+	names = ['甲','乙','丙']
+	context = {'names':names,
+	'fulltext':'how are you'}
+	return HttpResponse(template.render(context, request))
+	#return render(request, 'cpleepage.html')
 
 	
