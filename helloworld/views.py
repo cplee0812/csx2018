@@ -3,14 +3,13 @@ from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+import random
 
-
+from django.template import loader
 def index(request):
-	template = loader,get_template('cpleepage.html')
+	template = loader.get_template('cpleepage.html')
 	names = ['甲','乙','丙']
-	context = {'names':names,
-	'fulltext':'how are you'}
-	return HttpResponse(template.render(context, request))
-	#return render(request, 'cpleepage.html')
+	context = { "names": names, "fulltext": "說你好" }
+	return render(request, 'cpleepage.html', locals())
 
 	
