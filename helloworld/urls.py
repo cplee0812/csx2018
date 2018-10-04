@@ -21,3 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index)
 ]
+
+urlpatterns = patterns('', 
+
+(r'^site_source/(?P<path>.*)','django.views.static.serve',{'document_root':'\source'}), 
+)

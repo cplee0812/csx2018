@@ -13,7 +13,7 @@
 <body>
     <h1>
         <a href="cpleepage.html">
-            <img src="C:\Users\USER\csx2018cplee\source\picture\logo2.png" alt="logo" id="linkpic">
+            <img src="../static/img/logo2.png" alt="logo" id="linkpic">
         </a>
 
         <ul>
@@ -35,7 +35,7 @@
             {% for name in names %}
             <div class="msg">
                 <span class="name">{{ name }}
-                    <img src="../source/picture/頭像A.png">
+                    <img src="../static/img/頭像A.png">
                 <!--還不是很懂CSS的input,class的那是啥用R-->
                 <!--頭像要怎排版要再思考= =-->
                 </span> {{ fulltext }}
@@ -43,7 +43,7 @@
             {% endfor %}
             <div class="msg">
                 <span class="name">Michael</span>
-                <img src="../source/picture/頭像B.png"> Hello,Pecu.
+                <img src="../static/img/頭像B.png"> Hello,Pecu.
             </div>
         </div>
         <div id="send-box">
@@ -52,7 +52,6 @@
                 <input type="text" name="msg" id="msg" placeholder="說點什麼？">
                 <input type="submit" id="submit" value="送出">
             </form>
-            <span id='ps'>Ps:格子是假的，無法輸入ＸＤ</span>
         </div>
     </div>
 </body>
