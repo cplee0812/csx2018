@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Week2網頁排版測試中</title>
+    <title>Week3網頁排版測試中</title>
     <link href="..\static\css\style.css" rel="stylesheet" type="text/css" />
     <!--忘了怎加圖片連結了-->
 </head>
@@ -18,17 +18,18 @@
 
         <ul>
             <li><a href="cpleepage.html">Home</a></li>
+            <li><a href="category">Category</a></li>
             <li><a href="news.asp">News</a></li>
             <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.html">About</a></li>
+            <li style="float:right"><a class="active" href="about.html">About</a></li>
         </ul>
-    </h1>>
+    </h1>
     <h1>Hi大家，這是第二週的陽春範例。
-        <span id="ps" font-size:200%>改!</span>
+        <span id="ps">改二!</span>
     </h1>
     <h2>第二週需要學的是html跟css基礎<br> 網路上有很多教學，也有很多模板～
         <br> 大家加油！
-        <br><span id="ta">好喔感恩我盡量QQ</span>
+        <!--好喔感恩我盡量QQ-->
     </h2>
     <div id="container">
         <div id="content">
@@ -36,9 +37,9 @@
             <div class="msg">
                 <img src="../static/img/頭像A.png" class="avatar">
                 <span class="name">
-                    {{ name }}    
+                    {{ name }}
+                    
                 <!--還不是很懂CSS的input,class的那是啥用R-->
-                
                 </span> {{ fulltext }}
             </div>
             {% endfor %}

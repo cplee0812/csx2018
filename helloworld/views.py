@@ -9,7 +9,8 @@ from django.template import loader
 def index(request):
 	template = loader.get_template('cpleepage.html')
 	names = ['甲','乙','丙']
-	context = { "names": names, "fulltext": "說你好" }
+	message = {'踹共','說話啊!','hihi'}
+	context = { "names": names, 'fulltext': message }
 	return render(request, 'cpleepage.html', locals())
 
 	
