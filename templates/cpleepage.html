@@ -34,16 +34,19 @@
         <div id="content">
             {% for name in names %}
             <div class="msg">
-                <span class="name">{{ name }}
-                    <img src="../static/img/頭像A.png">
+                <img src="../static/img/頭像A.png" class="avatar">
+                <span class="name">
+                    {{ name }}    
                 <!--還不是很懂CSS的input,class的那是啥用R-->
-                <!--頭像要怎排版要再思考= =-->
+                
                 </span> {{ fulltext }}
             </div>
             {% endfor %}
             <div class="msg">
-                <span class="name">Michael</span>
-                <img src="../static/img/頭像B.png"> Hello,Pecu.
+                <img src="../static/img/頭像B.png" class="avatar">
+                <span class="name">
+                    Michael
+                </span> 你好
             </div>
         </div>
         <div id="send-box">
