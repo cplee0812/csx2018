@@ -33,16 +33,23 @@
     </h2>
     <div id="container">
         <div id="content">
+            {% for msg in msgs %}
+            <div class='msg'>
+                <span class="name">{{msg.speaker}}</span> {{msg.message}}
+            </div>
+            {% endfor %}
+            <!--
             {% for name in names %}
             <div class="msg">
                 <img src="../static/img/頭像A.png" class="avatar">
                 <span class="name">
                     {{ name }}
                     
-                <!--還不是很懂CSS的input,class的那是啥用R-->
+               
                 </span> {{ fulltext }}
             </div>
             {% endfor %}
+            -->
             <div class="msg">
                 <img src="../static/img/頭像B.png" class="avatar">
                 <span class="name">
