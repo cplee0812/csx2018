@@ -1,0 +1,46 @@
+html,
+body {
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    background-attachment: local;
+    background-size: 100% auto;
+}
+
+#warning {
+    color: white;
+    font-size: 150%;
+    text-indent: 100px;
+    text-align: center;
+}
+
+#no {
+    color: rgb(255, 238, 0);
+    font-size: 250%;
+    text-align: center;
+}
+
+#big {
+    color: rgb(144, 188, 255);
+    font-size: 1000%;
+    text-align: center;
+}
+
+#center {
+    width: 100%;
+    text-align: center;
+}
+
+#button {
+    background-color: white;
+    size: 200%;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 150%;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}

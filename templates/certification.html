@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="..\static\css\cirti.css" />
+</head>
+
+<body>
+    <h1 id="warning">本網站已依網站內容分級規定處理<br> 警告︰您即將進入之看板內容需滿十八歲方可瀏覽。
+        <br> 若您尚未年滿十八歲，請點選離開。<br>若您已滿十八歲，亦不可將本區之內容派發、傳閱、出售、出租、交給或借予年齡未滿18歲的人士瀏覽，或將本網站內容向該人士出示、播放或放映。
+    </h1>
+    <p id="no">並沒有</p>
+    <div id="center">
+        <a href="/mainpage">
+            <button type="button" id="button"> 是，我已年滿18歲</button></a>
+        <form action="" method="post">{% csrf_token %}
+            <button type="submit" value="nope" id="button"> 否，我未滿18歲</button></form>
+    </div>
+    <p id=big>{{ response }} </p>
+
+
+</body>
+
+</html>

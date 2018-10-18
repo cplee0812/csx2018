@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Week3網頁排版測試中</title>
+    <title>Week?網頁排版測試中</title>
     <link href="..\static\css\style.css" rel="stylesheet" type="text/css" />
     <!--忘了怎加圖片連結了-->
 </head>
@@ -24,13 +24,15 @@
             <li style="float:right"><a class="active" href="about.html">About</a></li>
         </ul>
     </h1>
-    <h1>Hi大家，這是第二週的陽春範例。
-        <span id="ps">改二!</span>
+    <h1>Hi大家，這是第N週的陽春範例。
+        <span id="ps">改造版!</span>
     </h1>
+    <!--
     <h2>第二週需要學的是html跟css基礎<br> 網路上有很多教學，也有很多模板～
         <br> 大家加油！
-        <!--好喔感恩我盡量QQ-->
+        好喔感恩我盡量QQ
     </h2>
+    -->
     <div id="container">
         <div id="content">
             {% for msg in msgs %}
@@ -58,7 +60,7 @@
             </div>
         </div>
         <div id="send-box">
-            <form id="send-form">
+            <form id="send-form" action="." method="POST">
                 <input type="text" name="name" id="name" placeholder="暱稱">
                 <input type="text" name="msg" id="msg" placeholder="說點什麼？">
                 <input type="submit" id="submit" value="送出">
