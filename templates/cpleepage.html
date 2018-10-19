@@ -12,12 +12,12 @@
 
 <body>
     <h1>
-        <a href="cpleepage.html">
+        <a href="/mainpage">
             <img src="../static/img/logo2.png" alt="logo" id="linkpic">
         </a>
 
         <ul>
-            <li><a href="cpleepage.html">Home</a></li>
+            <li><a href="/mainpage">Home</a></li>
             <li><a href="category">Category</a></li>
             <li><a href="news.asp">News</a></li>
             <li><a href="contact.asp">Contact</a></li>
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div id="send-box">
-            <form id="send-form" action="." method="POST">
+            <form id="send-form" action="." method="POST">{% csrf_token %}
                 <input type="text" name="name" id="name" placeholder="暱稱">
                 <input type="text" name="msg" id="msg" placeholder="說點什麼？">
                 <input type="submit" id="submit" value="送出">

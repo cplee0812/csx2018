@@ -44,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-#    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -80,8 +80,8 @@ DATABASES = {
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
       'default':{
-          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-          'NAME': 'testDB',
+          'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+          'NAME': 'Mydbase',
           'USER': 'cplee',
           'PASSWORD': '8708',
           'HOST': '',

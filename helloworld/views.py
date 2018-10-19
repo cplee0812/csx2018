@@ -20,11 +20,18 @@ def index(request):
 
 def mainpage(request):
 
-	t1 = TextMessage.objects.create(speaker='Michael', message='Hello, Professor!')
-	t2 = TextMessage.objects.create(speaker='Pecu', message='Hello, Class!')
-	t3 = TextMessage.objects.create(speaker='Domi', message='Hello, Michael!')
-
+	if request.method == 'POST':
+		_speaker = request.POST.get('name')
+		_message = request.POST.get('msg')
+		TextMessage.objects.create(speaker=_speaker, message=_message)
+		
 	msgs = TextMessage.objects.all()
+
+#	t1 = TextMessage.objects.create(speaker='Michael', message='Hello, Professor!')
+#	t2 = TextMessage.objects.create(speaker='Pecu', message='Hello, Class!')
+#	t3 = TextMessage.objects.create(speaker='Domi', message='Hello, Michael!')
+
+
 
 
 	
