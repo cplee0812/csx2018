@@ -5,5 +5,6 @@ from django.conf import settings
 class TextMessage(models.Model):
     speaker = models.CharField(max_length=20, blank=False)
     message = models.CharField(max_length=50, blank=True)
+    avatar = models.CharField(max_length=10, blank=True)
     def __str__(self):
         return self.speaker + " " + self.message

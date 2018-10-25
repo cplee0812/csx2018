@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登入頁</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css\style.css' %}" />
+
+</head>
+
+<body>
+    <h1>
+        <img src="{% static 'img\logo2.png' %}" alt="logo" id="linkpic">
+        <ul>
+            <li><a href="/mainpage">Home</a></li>
+            <li><a href="category">Category</a></li>
+            <li style="float:right"><a class="active" href="/about">About</a></li>
+        </ul>
+    </h1>
+    {% if request.user.is_authenticated %}
+    <!-- 檢查使用者是否通過驗證 -->
+    歡迎光臨：{{name}}
+    <br><button type="button" class="btn btn-warning" onclick="location.href='/logout'" style='color: red'>Logout</button> {% else %}
+    <p>You are not login yet!</p>
+    <button type="button" class="btn btn-warning" onclick="location.href='/login/'" style='color: red'>Login</button> {% endif %}
+
+    <span style="color: red">{{message}}</span>
+
+
+</body>
+
+</html>

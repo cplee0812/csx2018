@@ -17,11 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from loginapp import views as lviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('mainpage/', views.mainpage),
+    path('about/', views.about),
+    path('login/', lviews.login),
+    path('logout/', lviews.logout),
+    path('register/', lviews.register),
+    path('index/', lviews.index)
 ]
 
 urlpatterns += staticfiles_urlpatterns()

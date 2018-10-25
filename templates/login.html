@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登入頁面</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css\style.css' %}" />
+</head>
+
+<body>
+    <form action="." method="POST" name="form1">
+        {% csrf_token %}
+        <!-- <div class="form-group">
+            <label for="exampleInputEmail1">帳號</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="username">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="exampleInputEmail1">密碼</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="password" type="password">
+        </div>
+        <div>
+            <input type="submit" name="button" id="button" value="登入" /> -->
+        <div>
+            <div>Account：<input type="text" name="username" id="username" /></div>
+            <div>Password：<input type="password" name="password" id="password" /></div>
+            <div>
+                <input type="submit" class="btn btn-primary" name="button" id="button" value="login" />
+                <button type="button" class="btn btn-primary" onclick="location.href='/register/'">register</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='/'">main page</button>
+                <!-- <input type="button" value="註冊" onclick="location.href='/register/'"> -->
+            </div>
+    </form>
+    <span style="color: red">{{ message }}</span>
+
+</body>
+
+</html>

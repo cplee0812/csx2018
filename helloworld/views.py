@@ -35,11 +35,10 @@ def mainpage(request):
 
 
 	
-	#template = loader.get_template('cpleepage.html')
-	#names = ['甲','乙','丙']
-	#message = {'踹共','說話啊!','hihi'}
-	#context = { "names": names, 'fulltext': message }
 	
 	return render(request, 'cpleepage.html', locals())
 
+def about(request):
+
+	return render(request, 'about.html', locals())
 	

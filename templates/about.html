@@ -6,21 +6,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>About</title>
-    <link href="..\static\css\style.css" rel="stylesheet" type="text/css" />
-    <!--忘了怎加圖片連結了-->
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
     <h1>
-        <img src="../source/picture/logo2.png" alt="logo" id="linkpic">
+        <img src="{% static 'img\logo2.png' %}" alt="logo" id="linkpic">
         <ul>
-            <li><a href="cpleepage.html">Home</a></li>
-            <li><a href="news.asp">News</a></li>
-            <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.asp">About</a></li>
+            <li><a href="/mainpage">Home</a></li>
+            <li><a href="category">Category</a></li>
+            <li style="float:right"><a class="active" href="/about">About</a></li>
         </ul>
-    </h1>>
-    <h1>ABOUT THIS WEBSITE<br>NOTHING
+    </h1>
+    <h1>ABOUT THIS WEBSITE<br>NOTHING<br>哎呀 我的眼睛業障種
 
     </h1>
 

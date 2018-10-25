@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Week?網頁排版測試中</title>
-    <link href="..\static\css\style.css" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" type="text/css" />
     <!--忘了怎加圖片連結了-->
 </head>
 
 <body>
+    {% if request.user.is_authenticated %}
     <h1>
         <a href="/mainpage">
             <img src="../static/img/logo2.png" alt="logo" id="linkpic">
@@ -19,9 +20,7 @@
         <ul>
             <li><a href="/mainpage">Home</a></li>
             <li><a href="category">Category</a></li>
-            <li><a href="news.asp">News</a></li>
-            <li><a href="contact.asp">Contact</a></li>
-            <li style="float:right"><a class="active" href="about.html">About</a></li>
+            <li style="float:right"><a class="active" href="/about">About</a></li>
         </ul>
     </h1>
     <h1>Hi大家，這是第N週的陽春範例。
@@ -67,4 +66,7 @@
             </form>
         </div>
     </div>
+    {% else %}
+    <p>You are not login yet!</p>
+    <button type="button" class="btn btn-warning" onclick="location.href='/login/'" style='color: red'>Login</button> {% endif %}
 </body>
