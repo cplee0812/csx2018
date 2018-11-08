@@ -8,6 +8,9 @@ import random
 from django.views.decorators.csrf import csrf_protect
 from django.template import loader
 from .forms import nameForm
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 @csrf_protect
 def index(request):
     if request.method == 'POST': #是否为post请求
@@ -20,23 +23,33 @@ def index(request):
 
 def mainpage(request):
 
+
+
 	if request.method == 'POST':
-		_speaker = request.POST.get('name')
+		if request.user.is_authenticated:
+			_speaker = request.user.username
 		_message = request.POST.get('msg')
 		TextMessage.objects.create(speaker=_speaker, message=_message)
 		
-	msgs = TextMessage.objects.all()
+	msgs = TextMessage.objects.all()	
 
-#	t1 = TextMessage.objects.create(speaker='Michael', message='Hello, Professor!')
-#	t2 = TextMessage.objects.create(speaker='Pecu', message='Hello, Class!')
-#	t3 = TextMessage.objects.create(speaker='Domi', message='Hello, Michael!')
-
-
-
-
-	
-	
+	if request.method == 'GET':
+		if request.user.is_authenticated:
+			if request.GET.get('keywords') is not None:
+				msg_search = request.GET.get('keywords')
+				msgs = TextMessage.objects.filter(message__icontains= msg_search)
 	return render(request, 'cpleepage.html', locals())
+
+def personal(request):
+
+	if request.user.is_authenticated:
+		_user = request.user
+		msgs = TextMessage.objects.filter(speaker= _user)
+	return render(request, 'mypage.html', locals())
+
+def deletemsg(request):
+
+	return render(request, 'mypage.html', locals())
 
 def about(request):
 

@@ -40,12 +40,12 @@ def login(request):
 			if user.is_active:
 				auth.login(request,user)
 				return redirect('/index/')  #登入成功產生一個 Session，重導到<index.html>
-				message = '登入成功!'
+				
 			else:
 				message = '帳號尚未啟用!'
 		else:
 			message = '登入失敗!'
-	return render(request,"login.html",locals())  #登入失敗則重導回<login.html>
+	return render(request,"login.html", locals())  #登入失敗則重導回<login.html>
 
 def logout(request):
 	auth.logout(request)  #登出成功清除 Session，重導到<index.html>

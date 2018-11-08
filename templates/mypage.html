@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Personal Page</title>
+    <link href="{% static 'css\style.css' %}" rel="stylesheet" type="text/css" />
+    <!--忘了怎加圖片連結了-->
+</head>
+
+<body> {% if request.user.is_authenticated %}
+
+    <h1>
+        <a href="/mainpage">
+            <img src="../static/img/logo2.png" alt="logo" id="linkpic">
+        </a>
+
+        <ul>
+            <li><a href="/mainpage">Home</a></li>
+            <li><a href="/personal">Personal Page</a></li>
+            <li style="float:right"><a class="active" href="/about">About</a></li>
+        </ul>
+    </h1>
+    <h1>
+        <!--   <div id="send-box">
+            <form id="send-form" action="." method="POST">{% csrf_token %}
+                <input type="text" name="keywords" id="name" placeholder="搜尋ID">
+                <input type="submit" id="submit" value="搜尋">
+            </form>
+        </div>-->
+        個人資料
+        <span>略</span>
+    </h1>
+
+    <h2>我的留言
+    </h2>
+
+    <div id="container">
+        <ul>
+
+            {% for msg in msgs %}{% csrf_token %}
+            <li>
+                <div class='msg'>
+                    <span class="name">{{msg.speaker}}</span> {{msg.message}}
+                    <!--        <form id="send-form" action="." method="POST"><input type="text" name="editmsg" id="msg" placeholder="更改訊息"><input type="submit" id="submit" value="送出">
+                    </form><button type="button" onclick="/deletemsg/">刪除</button>-->
+                </div>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    {% else %}
+    <p>請登入以使用所有功能</p>
+    <button type="button" class="btn btn-warning" onclick="location.href='/login/'" style='color: red'>Login</button> {% endif %}
+</body>

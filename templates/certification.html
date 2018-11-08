@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>認證頁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css\certi.css' %}" />
 </head>
@@ -24,14 +24,6 @@
     </div>
     <p id=big>{{ response }} </p>
 
-    <!--
-    {% if request.user.is_authenticated %}
-    < !-- 檢查使用者是否通過驗證 -- >
-    歡迎光臨：{{name}}
-    <br><button type="button" class="btn btn-warning" onclick="location.href='/logout'" style='color: red'>Logout</button> {% else %}
-    <p>You are not login yet!</p>
-    <button type="button" class="btn btn-warning" onclick="location.href='/login/'" style='color: red'>Login</button> {% endif %}
--->
 </body>
 
 </html>
